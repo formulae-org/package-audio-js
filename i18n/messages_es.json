@@ -1,0 +1,10 @@
+{
+	"pathAudio":           "Audio",
+
+	"nameWaveformAudio":   "Audio de forma de onda",
+
+	"leafFromFile":        "Importar desde archivo ...",
+
+	"actionPlayback":      "Reproducir ...",
+	"actionPlaybackClose": "Cerrar"
+}

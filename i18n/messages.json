@@ -1,0 +1,10 @@
+{
+	"pathAudio":           "Audio",
+
+	"nameWaveformAudio":   "Waveform audio",
+
+	"leafFromFile":        "Import from file ...",
+
+	"actionPlayback":      "Playback ...",
+	"actionPlaybackClose": "Close"
+}
