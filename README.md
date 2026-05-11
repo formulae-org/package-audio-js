@@ -12,7 +12,6 @@ The GitHub organization [formulae-org](https://github.com/formulae-org) encompas
 
 * Import waveform audio from a file (MP3, WAV, OGG, and other browser-supported formats)
 * Serialize/deserialize audio as base64 within `.formulae` files
-* Display as a waveform symbol (▁▂▄█▄▂▁) in the REPL canvas
 
 ### Planned ###
 
