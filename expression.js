@@ -16,7 +16,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-'use strict';
+"use strict";
 
 export class Audio extends Formulae.Package {}
 
@@ -59,11 +59,11 @@ Audio.WaveformAudio = class extends Expression.Literal {
 		this.horzBaseline = Math.floor(size / 2);
 		this.vertBaseline = Math.floor(size / 2);
 	}
-
+	
 	display(context, x, y) {
 		drawWaveformIcon(context, x, y, this.width);
 	}
-
+	
 	set(name, value) {
 		switch (name) {
 			case "Value":  this.dataURL  = value; return;
@@ -71,7 +71,7 @@ Audio.WaveformAudio = class extends Expression.Literal {
 		}
 		super.set(name, value);
 	}
-
+	
 	get(name) {
 		switch (name) {
 			case "Value": return this.dataURL;
@@ -79,18 +79,18 @@ Audio.WaveformAudio = class extends Expression.Literal {
 		}
 		return super.get(name);
 	}
-
+	
 	getSerializationNames() {
 		return [ "Value", "Format" ];
 	}
-
+	
 	async getSerializationStrings() {
 		return [
 			this.dataURL.replace(/^data:[^;]+;base64,/, ""),
 			this.mimeType
 		];
 	}
-
+	
 	setSerializationStrings(strings, promises) {
 		this.mimeType = strings[1];
 		this.dataURL  = "data:" + strings[1] + ";base64," + strings[0];

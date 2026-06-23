@@ -16,7 +16,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-'use strict';
+"use strict";
 
 export class Audio extends Formulae.Package {}
 
@@ -24,7 +24,7 @@ Audio.editionFromFile = function() {
 	let input = document.createElement("input");
 	input.type   = "file";
 	input.accept = "audio/*";
-
+	
 	input.onchange = event => {
 		let file = event.target.files[0];
 		if (!file) return;
@@ -40,7 +40,7 @@ Audio.editionFromFile = function() {
 			Formulae.setSelected(Formulae.sHandler, expr, false);
 		};
 	};
-
+	
 	input.click();
 }
 
@@ -60,7 +60,7 @@ Audio.actionPlayback = {
 		let audioEl = document.createElement("audio");
 		audioEl.controls = true;
 		audioEl.src = Formulae.sExpression.get("Value");
-
+		
 		let escHandler = e => {
 			if (e.key === "Escape") {
 				audioEl.pause();
@@ -68,7 +68,7 @@ Audio.actionPlayback = {
 			}
 		};
 		document.addEventListener("keydown", escHandler, true);
-
+		
 		let closeBtn = document.createElement("button");
 		closeBtn.textContent = Audio.messages.actionPlaybackClose;
 		closeBtn.onclick = () => {
@@ -76,12 +76,12 @@ Audio.actionPlayback = {
 			document.removeEventListener("keydown", escHandler, true);
 			Formulae.resetModal();
 		};
-
+		
 		let container = document.createElement("div");
 		container.style.cssText = "padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 12px;";
 		container.appendChild(audioEl);
 		container.appendChild(closeBtn);
-
+		
 		Formulae.setModal(container);
 		audioEl.play().catch(() => {});
 	}
