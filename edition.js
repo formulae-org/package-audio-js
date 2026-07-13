@@ -47,7 +47,7 @@ Audio.editionFromFile = function() {
 Audio.setEditions = function() {
 	Formulae.addEdition(
 		Audio.messages.pathAudio,
-		null,
+		Audio.messages.leafFromFile,   // plain-text label — file-picker creator, no glyph to preview
 		Audio.messages.leafFromFile,
 		Audio.editionFromFile
 	);
