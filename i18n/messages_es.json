@@ -3,7 +3,7 @@
 
 	"nameWaveformAudio":   "Audio de forma de onda",
 
-	"leafFromFile":        "Importar desde archivo ...",
+	"leafFromFile":        "Importar desde archivo...",
 
 	"actionPlayback":      "Reproducir ...",
 	"actionPlaybackClose": "Cerrar"

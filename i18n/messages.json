@@ -3,7 +3,7 @@
 
 	"nameWaveformAudio":   "Waveform audio",
 
-	"leafFromFile":        "Import from file ...",
+	"leafFromFile":        "Import from file...",
 
 	"actionPlayback":      "Playback ...",
 	"actionPlaybackClose": "Close"
